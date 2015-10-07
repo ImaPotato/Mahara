@@ -22,7 +22,7 @@ $new_tokenstring = empty($tokenarray) ? null : ('|' . join('|', $tokenarray) . '
 
 set_account_preference($USER->id, 'mobileuploadtoken', $new_tokenstring);
 
-$arr = array ('token'=>$new_token);
+$arr = array ('token'=>$new_token, 'user'=>$USER->get('username'));
 
 $USER->commit();
 
